@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Item from "../Item/Item";
 import "./ItemListContainer.css"
-import ItemCount from '../ItemCount/ItemCount';
-import ItemList from "../ItemList/ItemList"
-import getItems from "../info";
+import getItems from "../../Services/info";
 
 function ItemListContainer(props) {
   let [data, setData] = useState([]);

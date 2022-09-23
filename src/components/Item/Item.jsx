@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
+import "./item.css"
 
 
 function Item(props) {
