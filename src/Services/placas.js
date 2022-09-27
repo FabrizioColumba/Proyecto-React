@@ -29,3 +29,10 @@ const data = [
           },2000);
       });
   }
+  export function getItem(){
+    return new Promise ((resolve, reject) =>{
+        setTimeout(()=>{
+            resolve (data[2]);
+        },1500);
+    });
+}

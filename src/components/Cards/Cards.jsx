@@ -1,11 +1,11 @@
 import React from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
-import "./cards.css"
-
-function Card(props) {
+function Card() {
   
   return (
-   <></>
+    <>
+    </> 
   );
 }
 
