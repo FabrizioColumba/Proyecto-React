@@ -1,6 +1,6 @@
 import React, {useState , useEffect} from 'react'
 import ItemDetail from "../ItemDetail/ItemDetail"
-import  {getItem} from "../../Services/placas"
+import  {getItem} from "../../Services/data"
 import {useParams} from "react-router-dom"
 
 function ItemDetailContainer() {

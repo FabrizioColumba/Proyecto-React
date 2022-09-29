@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from "react";
 import Item from "../Item/Item";
-import getItems from "../../Services/placas";
+import getItems, { getItemsByCategory } from "../../Services/data";
 import "./ItemListContainer.css"
+import {useParams} from "react-router-dom"
 
 function ItemListContainer(props) {
   let [data, setData] = useState([]);
+  console.log(useParams())
+const {cat} = useParams();
 
   useEffect(() => {
-    getItems().then((respuestaDatos) => setData(respuestaDatos));
+    if (cat === undefined){
+      getItems().then((respuestaDatos) => setData(respuestaDatos));
+    }
+    else {
+      getItemsByCategory(cat).then((respuestaDatos) => setData(respuestaDatos));
+    }
   }, []);
 
   return (

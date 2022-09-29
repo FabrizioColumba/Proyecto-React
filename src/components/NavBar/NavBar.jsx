@@ -23,10 +23,13 @@ function NavBar() {
             <Link className="nav-link" to="/category/catalogo">Catalogo</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/category/contacto">Contacto</Link>
+            <Link className="nav-link" to="/category/placasdevideo">Placas</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/category/nosotros">Nosotros</Link>
+            <Link className="nav-link" to="/category/procesadores">Procesadores</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/category/ram">Rams</Link>
           </li>
         </ul>
         <ul className="navbar-nav iconos">

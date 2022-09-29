@@ -14,7 +14,10 @@ function App() {
           <Route path="/" element={
             <ItemListContainer greeting="Bienvenidos a Gamer Shop"/>
           }/>
-          <Route path="/placas:id" element={
+           <Route path="/category:cat" element={
+            <ItemListContainer/>
+          }/>
+          <Route path="/componentes:id" element={
             <ItemDetailContainer />
           }/>
         </Routes>
