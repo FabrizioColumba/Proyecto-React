@@ -29,10 +29,14 @@ const data = [
           },2000);
       });
   }
-  export function getItem(){
+  export function getItem(itemId){
     return new Promise ((resolve, reject) =>{
-        setTimeout(()=>{
-            resolve (data[2]);
-        },1500);
+      let itemFind = data.find((item) => {
+        return item.id === parseInt(itemId)
+      });
+      setTimeout( () =>{
+        if (itemFind) resolve(itemFind);
+        else reject(new Error("Item no encontrado"));
+      }, 1500)
     });
 }

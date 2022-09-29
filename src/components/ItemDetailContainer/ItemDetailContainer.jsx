@@ -1,26 +1,25 @@
 import React, {useState , useEffect} from 'react'
 import ItemDetail from "../ItemDetail/ItemDetail"
 import  {getItem} from "../../Services/placas"
+import {useParams} from "react-router-dom"
 
 function ItemDetailContainer() {
   let [data, setData] = useState({});
-
+  
+  const {id}= useParams() ;
   useEffect(() => {
-    getItem().then((respuestaDatos) => setData(respuestaDatos));
-  }, []);
-
+    getItem(id).then((nuevosDatos) => setData(nuevosDatos));
+  }, [id]);
   return (
     <div>
-      <div className="main container">
-        <ItemDetail 
-        img={data.img}
-        title={data.title}
-        detail={data.detail}
-         />
+      <div className="main container"></div>
+      <div>
+        <ItemDetail {...data} />
       </div>
     </div>
   );
 }
+
 
 
 export default ItemDetailContainer;

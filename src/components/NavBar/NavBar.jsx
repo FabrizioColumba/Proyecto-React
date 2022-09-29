@@ -2,42 +2,43 @@ import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 import React from "react";
 import Account from '../Account/Account';
+import {Link} from "react-router-dom"
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
     <div className="container-fluid">
-      <a href="#">
+      <Link to="/">
          <img className='imgHome' src={require("./logo.png")} alt="logo"/>
-      </a>
+      </Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mx-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#">Inicio</a>
+            <Link className="nav-link" to="/">Inicio</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Catalogo</a>
+            <Link className="nav-link" to="/category/catalogo">Catalogo</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Contacto</a>
+            <Link className="nav-link" to="/category/contacto">Contacto</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Nosotros</a>
+            <Link className="nav-link" to="/category/nosotros">Nosotros</Link>
           </li>
         </ul>
         <ul className="navbar-nav iconos">
             <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/cart">
                  <CartWidget />
-                </a>
+                </Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/account">
                     <Account />
-                 </a>
+                 </Link>
             </li>
          </ul>
       </div>

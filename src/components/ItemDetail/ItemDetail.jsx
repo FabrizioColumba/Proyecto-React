@@ -1,6 +1,7 @@
 import React from 'react'
 import "./itemdetail.css"
-
+import Button from '../Button/Button';
+import ItemCount from '../ItemCount/ItemCount';
 
 function ItemDetail(props) {
     return (
@@ -11,6 +12,10 @@ function ItemDetail(props) {
         <p>{props.detail}</p>
         <h4>{props.price}</h4>
         </div>
+        <Button>
+          Ver más
+        </Button>
+        <ItemCount initial={1} stock={5} />
       </div>
     );
   }

@@ -1,14 +1,13 @@
 import React from "react";
 import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
-import "./item.css"
+import "./item.css";
+import {Link} from "react-router-dom";
 
 
 function Item(props) {
-  let { price, title, img, detail, stock } = props;
-
+  let { id, price, title, img, detail} = props;
   return (
-
     <div className="card">
     <div className="card-img">
       <img src={img} alt="card img"></img>
@@ -18,10 +17,12 @@ function Item(props) {
       <p>{detail}</p>
       <h4>$ {price}</h4>
     </div>
+    <Link to={`/placas/${id}`}>
     <Button>
         Ver más
     </Button>
-    <ItemCount initial={1} stock={stock} />
+    </Link>
+    <ItemCount initial={1} stock={5}/>
     </div>
     
 
