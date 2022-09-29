@@ -17,7 +17,7 @@ function Item(props) {
       <p>{detail}</p>
       <h4>$ {price}</h4>
     </div>
-    <Link to={`/placas/${id}`}>
+    <Link to={`/componentes/${id}`}>
     <Button>
         Ver más
     </Button>

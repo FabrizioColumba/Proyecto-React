@@ -29,7 +29,7 @@ function NavBar() {
             <Link className="nav-link" to="/category/procesadores">Procesadores</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/category/ram">Rams</Link>
+            <Link className="nav-link" to="/category/rams">Rams</Link>
           </li>
         </ul>
         <ul className="navbar-nav iconos">
