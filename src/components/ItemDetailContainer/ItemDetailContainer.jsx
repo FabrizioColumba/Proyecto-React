@@ -4,11 +4,12 @@ import  {getItem} from "../../Services/data"
 import {useParams} from "react-router-dom"
 
 function ItemDetailContainer() {
-  let [data, setData] = useState({});
+  const [data, setData] = useState({});
   
   const {id}= useParams() ;
   useEffect(() => {
-    getItem(id).then((nuevosDatos) => setData(nuevosDatos));
+    getItem(id)
+    .then((nuevosDatos) => setData(nuevosDatos))
   }, [id]);
   return (
     <div>

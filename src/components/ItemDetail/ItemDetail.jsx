@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./itemdetail.css"
-import Button from '../Button/Button';
 import ItemCount from '../ItemCount/ItemCount';
+import {Link} from "react-router-dom";
 
 function ItemDetail(props) {
+  const [goToCart, setGoToCart] = useState(false);
+
+  const onAdd = () => {
+    setGoToCart(true);
+  }
     return (
       <div className="main container">
         <img src={props.img}></img>
@@ -12,10 +17,11 @@ function ItemDetail(props) {
         <p>{props.detail}</p>
         <h4>{props.price}</h4>
         </div>
-        <Button>
-          Ver más
-        </Button>
-        <ItemCount initial={1} stock={5} />
+        {
+          ( goToCart)
+          ? <Link to="/Cart/">Finalizar Compra</Link>
+          : <ItemCount initial={1} stock={5} onAddToCart={onAdd}/>
+        }
       </div>
     );
   }

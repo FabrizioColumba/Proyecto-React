@@ -17,15 +17,12 @@ function Item(props) {
       <p>{detail}</p>
       <h4>$ {price}</h4>
     </div>
-    <Link to={`/componentes/${id}`}>
+    <Link to={`/components/${id}`}>
     <Button>
         Ver más
     </Button>
     </Link>
-    <ItemCount initial={1} stock={5}/>
     </div>
-    
-
   );
 }
 
