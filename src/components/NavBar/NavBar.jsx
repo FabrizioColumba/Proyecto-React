@@ -20,16 +20,20 @@ function NavBar() {
             <Link className="nav-link" to="/">Inicio</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/category/catalogo">Catalogo</Link>
+            <Link className="nav-link" to="/Tienda/">Tienda</Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/category/placasdevideo">Placas</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/category/procesadores">Procesadores</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/category/rams">Rams</Link>
+        <li className="nav-item dropdown">
+          <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Componentes
+          </Link>
+          <ul className="dropdown-menu">
+            <li><Link className="dropdown-item" to="/category/placasdevideo">Placas</Link></li>
+            <li><Link className="dropdown-item" to="/category/procesadores">Procesadores</Link></li>
+            <li><Link className="dropdown-item" to="/category/rams">Rams</Link></li>
+          </ul>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to="/Contacto/">Contacto</Link>
           </li>
         </ul>
         <ul className="navbar-nav iconos">

@@ -11,7 +11,7 @@ function Button({ children }) {
     }
 
     return (
-        <button style={{ backgroundColor: color }} onClick={handleClick} clasName="btn">
+        <button style={{ backgroundColor: color }} onClick={handleClick} className="btn">
             {children}
         </button>
     );

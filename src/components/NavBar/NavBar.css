@@ -1,6 +1,9 @@
-a:hover{
-    color: yellow;
+.nav-link{
+    color:white;
+}
+.nav-link:hover{
     font-size: 20px;
+    color:white;
 }
 .imgHome{
     width: 70px;
@@ -10,4 +13,3 @@ a:hover{
 .iconos{
     margin-right: 50px;
 }
-

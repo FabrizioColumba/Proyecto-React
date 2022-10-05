@@ -53,7 +53,7 @@ const data = [
       price: 450,
       detail: "Las mejores rams del mercado",
       img:"/assets/ram1.jpg",
-      category: "ram",
+      category: "rams",
     },
     {
       id: 8,
@@ -61,7 +61,7 @@ const data = [
       price: 300,
       detail: "Las mejores rams del mercado",
       img:"/assets/ram2.jpg",
-      category: "ram",
+      category: "rams",
     },
     {
       id: 9,
@@ -69,7 +69,7 @@ const data = [
       price: 189,
       detail: "Las mejores rams del mercado",
       img:"/assets/ram3.jpg",
-      category: "ram",
+      category: "rams",
     },
   ];
   
@@ -77,7 +77,7 @@ const data = [
       return new Promise ((resolve, reject) =>{
           setTimeout(()=>{
               resolve (data);
-          },2000);
+          },1000);
       });
   }
   export function getItemsByCategory(cat){
@@ -88,7 +88,7 @@ const data = [
       setTimeout( () =>{
         if (itemFind) resolve(itemFind);
         else reject(new Error("Item no encontrado"));
-      }, 1500)
+      }, 1000)
     });
 }
   export function getItem(itemId){
@@ -99,6 +99,6 @@ const data = [
       setTimeout( () =>{
         if (itemFind) resolve(itemFind);
         else reject(new Error("Item no encontrado"));
-      }, 1500)
+      }, 1000)
     });
 }
