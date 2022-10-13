@@ -2,10 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import {useCartContext} from "../../Context/CartContext"
 import "./cart.css"
+import Button from '../Button/FinishButton';
 
 function Cart(data) {
     const {cart, totalPrice} = useCartContext();
     const { removeProduct } = useCartContext();
+    const { clearCart } = useCartContext();
     if (cart.lenght === 0) {
         return (
             <>
@@ -31,6 +33,9 @@ function Cart(data) {
          <p>
          Total: ${totalPrice()}
          </p>
+         <Button>
+                Finalizar Compra
+        </Button>
     </div>   
   )
 

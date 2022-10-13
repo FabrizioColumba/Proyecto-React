@@ -1,11 +1,10 @@
 import React, { useState} from 'react';
-import "./button.css";
 
 function Button({ children }) {
-    let [color, setColor] = useState("lightblue")
+    let [color, setColor] = useState("red")
 
     function handleClick() {
-        alert("Clickeado!")
+        alert("Presiona Aceptar para ser redirigido")
         setColor("purple");
 
     }

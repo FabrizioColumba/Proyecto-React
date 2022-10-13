@@ -1,22 +1,26 @@
 import React, { useState, useEffect } from "react";
 import Item from "../Item/Item";
-import getItems, { getItemsByCategory } from "../../Services/data";
+import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 import "./tienda.css"
 import {useParams} from "react-router-dom"
 
-function Catalogo(props) {
-    let [data, setData] = useState([]);
-    console.log(useParams())
-  const {cat} = useParams();
+function Tienda(props) {
+    const [data, setData] = useState([]);
+    const {cat} = useParams();
   
     useEffect(() => {
-      if (cat === undefined){
-        getItems().then((respuestaDatos) => setData(respuestaDatos));
-      }
-      else {
-        getItemsByCategory(cat).then((respuestaDatos) => setData(respuestaDatos));
-      }
+      const querydb = getFirestore();
+      const queryCollection = collection(querydb, "productos");
+          if (cat){
+            const queryFilter = query(queryCollection, where("category,", "==", cat))
+            getDocs(queryFilter)
+                .then(res => setData(res.docs.map(productos =>({id: productos.id, ...productos.data()}))))
+          } else {
+            getDocs(queryCollection)
+              .then(res => setData(res.docs.map(productos =>({id: productos.id, ...productos.data()}))))
+          }
     }, []);
+    
   
     return (
         <div>
@@ -38,4 +42,4 @@ function Catalogo(props) {
       );
     }
 
-export default Catalogo
+export default Tienda

@@ -49,7 +49,7 @@ const data = [
     },
     {
       id: 7,
-      title: "Memoria Adata DDR4 (2x8GB) 16GB 5000MHz XPG Spectrix ",
+      title: "Memoria Adata DDR4 (2x8GB) 16GB 5000MHz XPG Spectrix",
       price: 450,
       detail: "Las mejores rams del mercado",
       img:"/assets/ram1.jpg",
