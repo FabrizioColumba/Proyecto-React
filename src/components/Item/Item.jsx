@@ -5,10 +5,11 @@ import {Link} from "react-router-dom";
 
 
 function Item(props) {
-  let { id, price, title, img, detail,} = props;
+  let {key, id, price, title, img, detail,} = props;
   return (
     <div className="card">
     <div className="card-img">
+      <div>{key}</div>
       <img src={img} alt="card img"></img>
     </div>
     <div className="card-detail">
