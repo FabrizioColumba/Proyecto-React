@@ -1,6 +1,7 @@
 const data = [
     {
       id: 1,
+      key: 1,
       title: "Placa de Video ASUS GeForce RTX 3090 24GB GDDR6X TUF GAMING OC",
       price: 1060,
       detail: "La mejor placa de video del mercado",
@@ -9,6 +10,7 @@ const data = [
     },
     {
       id: 2,
+      key: 2,
       title: "Placa de Video MSI GeForce RTX 3090 24GB GDDR6X GAMING X TRIO",
       price: 975,
       detail: "La mejor placa de video del mercado",
@@ -17,6 +19,7 @@ const data = [
     },
     {
       id: 3,
+      key: 3,
       title: "Placa de Video Zotac GeForce RTX 3090 24GB GDDR6X Trinity",
       price: 915,
       detail: "La mejor placa de video del mercado",
@@ -25,6 +28,7 @@ const data = [
     },
     {
       id: 4,
+      key: 4,
       title: "Procesador AMD Ryzen 9 5950X 4.9GHz Turbo AM4 - No incluye Cooler",
       price: 435,
       detail: "El mejor procesador del mercado",
@@ -33,6 +37,7 @@ const data = [
     },
     {
       id: 5,
+      key: 5,
       title: "Procesador Intel Core i7 12700K 5.0GHz Turbo Socket 1700",
       price: 325,
       detail: "El mejor procesador del mercado",
@@ -41,6 +46,7 @@ const data = [
     },
     {
       id: 6,
+      key: 6,
       title: "Procesador AMD Ryzen 9 5900X 4.8GHz Turbo AM4 - No incluye Cooler",
       price: 310,
       detail: "El mejor procesador del mercado",
@@ -49,6 +55,7 @@ const data = [
     },
     {
       id: 7,
+      key: 7,
       title: "Memoria Adata DDR4 (2x8GB) 16GB 5000MHz XPG Spectrix",
       price: 450,
       detail: "Las mejores rams del mercado",
@@ -57,6 +64,7 @@ const data = [
     },
     {
       id: 8,
+      key: 8,
       title: "Memoria Team DDR5 32GB (2x16GB) 5200MHz T-Force Vulcan Red",
       price: 300,
       detail: "Las mejores rams del mercado",
@@ -65,6 +73,7 @@ const data = [
     },
     {
       id: 9,
+      key: 9,
       title: "Memoria Team DDR4 64GB (2x32GB) 2666MHz T-Create",
       price: 189,
       detail: "Las mejores rams del mercado",

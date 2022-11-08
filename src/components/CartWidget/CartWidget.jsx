@@ -1,7 +1,7 @@
-import React from 'react'
-import {useCartContext} from "../../Context/CartContext"
+import React, { useContext } from 'react'
+import {cartContext} from "../Context/CartContext"
 function CartWidget() {
-  const {totalProducts} = useCartContext();
+  const {totalProducts} = useContext(cartContext);
   return (
     <div>
       <i className="bi bi-cart2"></i>

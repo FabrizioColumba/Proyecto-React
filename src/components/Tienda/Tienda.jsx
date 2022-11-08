@@ -12,12 +12,14 @@ function Tienda(props) {
       const querydb = getFirestore();
       const queryCollection = collection(querydb, "productos");
           if (cat){
-            const queryFilter = query(queryCollection, where("category,", "==", cat))
+            console.log(cat);
+            const queryFilter = query(queryCollection, where("category", "==", cat))
             getDocs(queryFilter)
                 .then(res => setData(res.docs.map(productos =>({id: productos.id, ...productos.data()}))))
           } else {
             getDocs(queryCollection)
               .then(res => setData(res.docs.map(productos =>({id: productos.id, ...productos.data()}))))
+              console.log(data);
           }
     }, []);
     

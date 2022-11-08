@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import {useCartContext} from "../../Context/CartContext"
+
 
 
 function FinishButton({ children }) {
@@ -9,7 +9,6 @@ function FinishButton({ children }) {
     function finishClick() {
         alert("Compra Finalizada")
         setColor("purple");
-
     }
 
     return (
