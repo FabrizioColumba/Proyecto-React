@@ -9,7 +9,7 @@ function Checkout() {
     <div className="checkout">
       <h2 className="checkout-items">¡Su compra se ha realizado con exito!</h2>
       <h3 className="checkout-items">
-        ¡Gracias por confiar en Sasha pasteles!
+        ¡Gracias por confiar en Gamer Shop!
       </h3>
       <h4 className="checkout-items">
         En breve le llegara un mail con los pasos a seguir{" "}
